@@ -42,8 +42,9 @@ L.mapbox.accessToken = 'pk.eyJ1Ijoia2V2cmVpbiIsImEiOiJfQ0RHX2hZIn0.hI4lNnug0mHlU
 	minZoom: 7,
   }).setView([37.5,-120.1], 7);
   var layers = {
-      Streets: L.mapbox.tileLayer('kevrein.8vcy04ux', 
-tileLayer: {detectRetina: true}),
+      Streets: L.mapbox.tileLayer(
+      { tiles: ['https://a.tiles.mapbox.com/v4/kevrein.8vcy04ux/{z}/{x}/{y}@2x.png?access_token=pk.eyJ1Ijoia2V2cmVpbiIsImEiOiJfQ0RHX2hZIn0.hI4lNnug0mHlUQ16xX3fIg'] },
+      { tileSize: 512 }),
       Contours: L.mapbox.tileLayer('kevrein.d96jh384'),
       Hydrography: L.mapbox.tileLayer('kevrein.4acek9ya')
   };
